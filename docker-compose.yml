@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  db:
+    build: .
+    environment:
+      POSTGRES_DB: "zverev_db"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"

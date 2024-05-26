@@ -1,0 +1,18 @@
+post http://localhost:8080/ - add user
+
+post http://localhost:8080/buy - add buy (user_id in request body)
+
+get http://localhost:8080/pay/1 - make pay (user_id in url)
+
+buyList
+{
+"name":"notebook",
+"userId":1,
+"cost":10
+}
+
+User
+{
+"name":"Zverev Artem",
+"email":"logggistic@mail.ru"
+}
